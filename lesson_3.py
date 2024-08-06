@@ -20,7 +20,7 @@ class Employee(Person):
         return f"{self.first_name} {self.last_name} joined this organization in the year {self.employment_year}, and earns a salary of Ksh.{self.salary}."
 
 
-felix = Employee(
-    first_name="John", last_name="Doe", age=30, salary=410000, employment_year=2020
+jon = Employee(
+    first_name="Jon", last_name="Doe", age=30, salary=410000, employment_year=2020
 )
-print(felix.employee())
+print(jon.employee())
