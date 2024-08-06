@@ -21,6 +21,6 @@ class Employee(Person):
 
 
 felix = Employee(
-    first_name="Felix", last_name="Omondi", age=25, salary=40000, employment_year=2024
+    first_name="John", last_name="Doe", age=30, salary=410000, employment_year=2020
 )
 print(felix.employee())
