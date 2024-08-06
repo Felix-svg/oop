@@ -14,3 +14,7 @@ person1 = Person(name="Jon", age=40)
 print(person1.age)
 print(person1.name)
 person1.my_func()
+
+#modify object properties
+person1.age = 20
+del person1.age # the del keyword deletes an object property
