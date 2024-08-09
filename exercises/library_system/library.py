@@ -4,13 +4,13 @@ class Library:
     def __init__(self):
         self.books = []
 
-    def add_book(self, book):
+    def add_book(self, book:Book):
         self.books.append(book)
 
-    def remove_book(self, isbn):
+    def remove_book(self, isbn:str):
         self.books = [book for book in self.books if book.isbn != isbn]
 
-    def find_book(self, isbn):
+    def find_book(self, isbn:str):
         book = [str(book) for book in self.books if book.isbn == isbn]
         if book:
             return "".join(book)

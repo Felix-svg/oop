@@ -10,7 +10,7 @@ class Book:
         return self._title
 
     @title.setter
-    def title(self, title):
+    def title(self, title:str):
         if isinstance(title, str) and (len(title) > 0):
             self._title = title
         else:
@@ -21,7 +21,7 @@ class Book:
         return self._author
 
     @author.setter
-    def author(self, author):
+    def author(self, author:str):
         if isinstance(author, str) and (len(author) > 0):
             self._author = author
         else:
@@ -32,7 +32,7 @@ class Book:
         return self._isbn
 
     @isbn.setter
-    def isbn(self, isbn):
+    def isbn(self, isbn:str):
         if isinstance(isbn, str) and (len(isbn) == 13):
             self._isbn = isbn
         else:
@@ -43,7 +43,7 @@ class Book:
         return self._available
 
     @available.setter
-    def available(self, available):
+    def available(self, available:bool):
         if isinstance(available, bool):
             self._available = available
         else:
