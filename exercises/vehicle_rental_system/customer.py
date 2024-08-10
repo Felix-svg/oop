@@ -1,36 +1,12 @@
 from vehicle import Vehicle
+from validate_type import validate_type
 
 
 class Customer:
     def __init__(self, customer_id: str, name: str, rented_vehicles=None) -> None:
-        self.customer_id = customer_id
-        self.name = name
-        if rented_vehicles is None:
-            self.rented_vehicles = []
-        else:
-            self.rented_vehicles = rented_vehicles
-
-    @property
-    def customer_id(self):
-        return self._customer_id
-
-    @customer_id.setter
-    def customer_id(self, id: str):
-        if not isinstance(id, str):
-            raise ValueError("customer_id must be a string")
-        else:
-            self._customer_id = id
-
-    @property
-    def name(self):
-        return self._name
-
-    @name.setter
-    def name(self, name: str):
-        if not isinstance(name, str):
-            raise ValueError("name must be a string")
-        else:
-            self._name = name
+        self.customer_id = validate_type(customer_id, str, "customer_id")
+        self.name = validate_type(name, str, "name")
+        self.rented_vehicles = rented_vehicles or []
 
 
     def rent_vehicle(self, vehicle: Vehicle) -> None:
